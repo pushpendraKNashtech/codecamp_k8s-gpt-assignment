@@ -1,0 +1,6 @@
+# Capture the broken-state output here.
+#
+# Suggested commands:
+# kubectl get pods -n k8sgpt-assignment
+# kubectl get svc -n k8sgpt-assignment
+# kubectl get endpoints -n k8sgpt-assignment

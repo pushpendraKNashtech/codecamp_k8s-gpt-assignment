@@ -1,0 +1,7 @@
+# Capture both K8sGPT outputs here:
+#
+# Facts-only:
+# k8sgpt analyze --filter=Service --namespace=k8sgpt-assignment
+#
+# AI-assisted:
+# k8sgpt analyze --explain --filter=Service --namespace=k8sgpt-assignment
