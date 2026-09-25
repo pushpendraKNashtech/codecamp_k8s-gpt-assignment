@@ -1,6 +1,12 @@
-# Capture the verified fixed-state output here.
-#
-# Suggested commands:
-# kubectl get pods -n k8sgpt-assignment
-# kubectl get svc -n k8sgpt-assignment
-# kubectl get endpoints -n k8sgpt-assignment
+===== PODS =====
+NAME                  READY   STATUS    RESTARTS   AGE
+web-f4dd7dd4f-kfj5m   1/1     Running   0          51m
+web-f4dd7dd4f-lfz27   1/1     Running   0          51m
+
+===== SERVICES =====
+NAME      TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+web-svc   ClusterIP   10.96.19.51   <none>        80/TCP    51m
+
+===== ENDPOINTS =====
+NAME      ENDPOINTS                     AGE
+web-svc   10.244.0.5:80,10.244.0.6:80   51m

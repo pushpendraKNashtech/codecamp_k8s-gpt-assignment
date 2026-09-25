@@ -1,7 +1,16 @@
-# Capture both K8sGPT outputs here:
-#
-# Facts-only:
-# k8sgpt analyze --filter=Service --namespace=k8sgpt-assignment
-#
-# AI-assisted:
-# k8sgpt analyze --explain --filter=Service --namespace=k8sgpt-assignment
+AI Provider: AI not used; --explain not set
+
+0: Service k8sgpt-assignment/web-svc()
+- Error: Service has no endpoints, expected label app=frontend
+
+
+AI Provider: ollama
+
+0: Service k8sgpt-assignment/web-svc()
+- Error: Service has no endpoints, expected label app=frontend
+Error: {Service has no endpoints, expected label app=frontend}
+Solution: 
+1. Check if the service has a corresponding Deployment or ReplicaSet with the app=frontend label.
+2. Verify if the service is correctly exposed using a Service object with the app=frontend label.
+3. Run `kubectl get svc` and `kubectl get pods` to inspect the service and pods.
+
